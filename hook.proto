@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "./hook";
+
+package hook;
+
+message CallbackReq {
+   string body = 1;
+}
+
+message CallbackResp {
+}
+
+message VerifyMsg {
+}
+
+service HookService {
+    rpc Callback(CallbackReq) returns (CallbackResp) {}
+    rpc Verify(VerifyMsg) returns (VerifyMsg) {}
+}

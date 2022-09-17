@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "./register";
+
+package register;
+
+message RegisterReq {
+    string body = 1;
+}
+
+message RegisterResp {
+}
+
+message ListReq {
+}
+
+message ListResp {
+}
+
+service RegisterService {
+    rpc Register(RegisterReq) returns (RegisterResp) {}
+    rpc List(ListReq) returns (ListResp) {}
+}
